@@ -295,7 +295,7 @@ margin - внутр отступ */
         padding: 200px 0 100px 0;
     }
     .welcome__text {
-        width: 100vh;
+        width: 370px;
     }
     
     .welcome__desc {
@@ -312,10 +312,9 @@ margin - внутр отступ */
         margin-bottom: auto;
     }
     .gallery__photos {
-        margin-left: 5vh;
-        margin-right: 5vh;
         width: 40vh;
         height: 30vh;
+      
         
     }
     .about__desc {
@@ -331,7 +330,6 @@ margin - внутр отступ */
         margin: 40px 0 40px 0;
         font-weight: 300;
         font-size: 60px;
-    }
-
+    
 
 }
