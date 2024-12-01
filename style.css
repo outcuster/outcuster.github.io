@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+/* Общие стили */
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #1C1C1C;
+    color: #fff;
+}
+
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 15px;
+}
+
+
+.btn {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 500;
+    font-size: 14px;
+
+    width: 170px;
+    height: 47px;
+
+    background: #FF0000;
+    border-radius: 80px;
+
+    transition: opacity 0.3s;
+
+}
+
+
+.btn:hover, .btn2:hover {
+    opacity: 0.8;
+}
+
+
+
+/* Все элементы лежат тут */
+
+.header {
+    padding: 25px 0;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+    width: 5em;
+    height: 5em;
+    background-image: url("./images/logo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Делаем отдельно для списка */
+
+.header__list {
+    display: flex;
+    gap: 30px;
+}
+
+/* если написать .а вместо а, то будет делать поиск не по тегам, а по классам 1:09:50 */
+
+.header__nav a {
+/* width: 61px; 
+height: 16px;  будет действовать только если задать display: inline-block*/
+    font-size: 14px;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+
+}
+
+.header__nav a.active {
+    opacity: 1;
+    }
+
+.header__nav a:hover {
+    opacity: 0.9;
+    
+    }
+
+
+
+.main {
+}
+
+/* Welcome */
+
+/* padding - внеш отступ
+margin - внутр отступ */
+
+.welcome {
+    box-sizing: border-box;
+    min-height: 100vh;
+    margin-top: -130px;
+    padding: 100px 0 900px 0;
+    /* padding: 20px 0 900px 0; */
+    background-image: url("./images/welcome-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+    
+}
+
+
+.welcome__text {
+    width: 660px;
+}
+
+
+.welcome__title {
+    margin: 0;
+    font-weight: 700;
+    font-size: 130px;
+
+    color: #FF0000;
+
+}
+
+.welcome__desc {
+    margin: 0;
+    font-weight: 400;
+    font-size: 56px;
+
+    color: #FFFFFF;
+
+
+}
+
+/* About */
+.about__text {
+  
+}
+
+.general__title {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0 40px 0;
+    font-weight: 300;
+    font-size: 80px;
+
+}
+
+.about__desc {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto 50px; 
+    width: 600px;
+    font-weight: 100;
+}
+
+.btn2 {
+    margin: 0 auto 80px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 500;
+    font-size: 14px;
+
+    width: 300px;
+    height: 60px;
+
+    background: #FF0000;
+    border-radius: 80px;
+
+    transition: opacity 0.3s;
+
+}
+
+
+/* galery */
+
+.gallery {
+    display: flex;
+    background: #312F30;
+}
+
+
+
+.gallery__photos {
+    margin: 20px 0 40px 0;
+    position: relative;
+    width: 90vh;
+    height: 500px;
+    overflow: hidden;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+}
+
+.gallery__photos img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.5s ease;
+    
+}
+
+
+.btn3 {
+    margin: 0 auto 40px; 
+    display: flex;
+    align-items: center; /* Вертикальное выравнивание содержимого */
+    justify-content: center; /* Выравнивание по левому краю */
+    font-weight: 500;
+    font-size: 14px;
+    
+    width: 300px;
+    height: 60px;
+    
+    background: #61A8DE;
+    border-radius: 80px;
+    padding-left: 20px;  /* Отступ слева для изображения */
+    position: relative;
+    transition: opacity 0.3s;
+}
+  
+.btn3::before {
+    content: "";
+    background: url('/images/tg.png') no-repeat center center;
+    background-size: 40px 40px; /* Размер изображения */
+    width: 40px;
+    height: 40px;
+    position: absolute; /* Абсолютное позиционирование для размещения слева */
+    left: 15px; /* Располагаем изображение слева */
+}
+  
+  
+
+
+.partners__desc {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto 50px; 
+    width: 600px;
+    font-weight: 100;
+    font-size: 1.2em;
+}
+
+
+
+.contacts {
+    display: flex;
+    background: #312F30;
+}
+
+@media (max-width: 725px) {
+    .partners__desc {
+        font-size: 1em;
+    }
+    .header .container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .header__list {
+        flex-direction: column;
+        text-align: center;
+        gap: 5px;
+        padding-bottom: 1em;
+    }
+    .header__logo {
+        padding: 1em;
+    }
+    .welcome {
+        background-image: url("./images/welcome-bg-2.jpg");
+        background-size: 1000px;
+        margin-top: -900px;
+        padding: 200px 0 100px 0;
+    }
+    .welcome__text {
+        width: 100vh;
+    }
+    
+    .welcome__desc {
+        margin: 0;
+        font-weight: 400;
+        font-size: 36px;
+        color: #FFFFFF;
+        width: 350px;
+    
+    }
+    .welcome__title {
+        font-size: 90px;
+        padding-top: 800px;
+        margin-bottom: auto;
+    }
+    .gallery__photos {
+        margin-left: 5vh;
+        margin-right: 5vh;
+        width: 40vh;
+        height: 30vh;
+        
+    }
+    .about__desc {
+        width: auto;
+    }
+    .partners__desc {
+        width: auto;
+    }
+    .general__title {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        margin: 40px 0 40px 0;
+        font-weight: 300;
+        font-size: 60px;
+    }
+
+
+}
