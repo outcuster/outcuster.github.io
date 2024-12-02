@@ -1,22 +1,29 @@
-const images = document.querySelectorAll('.gallery__photos img');
-let currentIndex = 0;
+fetch('https://code.jquery.com/jquery-3.5.1.slim.min.js')
+  .then(response => response.text())
+  .then(script => {
+    // Создаем новый тег <script> и вставляем код
+    const scriptElement = document.createElement('script');
+    scriptElement.text = script;
+    document.head.appendChild(scriptElement);
+  })
+  .catch(error => console.error('Error loading external script:', error));
 
-function showImage(index) {
-    images.forEach((img, i) => {
-        img.style.opacity = i === index ? '1' : '0';
-    });
-}
+  fetch('https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js')
+  .then(response => response.text())
+  .then(script => {
+    // Создаем новый тег <script> и вставляем код
+    const scriptElement = document.createElement('script');
+    scriptElement.text = script;
+    document.head.appendChild(scriptElement);
+  })
+  .catch(error => console.error('Error loading external script:', error));
 
-setInterval(() => {
-    currentIndex = (currentIndex + 1) % images.length;
-    showImage(currentIndex);
-}, 3000); // 3000 мс = 3 секунды
-
-// Для управления при помощи мыши (ЛКМ для переключения)
-document.querySelector('.gallery').addEventListener('click', () => {
-   currentIndex = (currentIndex + 1) % images.length;
-   showImage(currentIndex);
-});
-
-// Initial call to display the first image
-showImage(currentIndex);
+  fetch('https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js')
+  .then(response => response.text())
+  .then(script => {
+    // Создаем новый тег <script> и вставляем код
+    const scriptElement = document.createElement('script');
+    scriptElement.text = script;
+    document.head.appendChild(scriptElement);
+  })
+  .catch(error => console.error('Error loading external script:', error));
